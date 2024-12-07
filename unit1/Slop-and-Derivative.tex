@@ -1,0 +1,150 @@
+\documentclass{article}
+\usepackage{amsmath}
+\begin{document}
+
+\begin{enumerate}
+\item 1C-1
+    \begin{enumerate}
+        \item We have $S = \pi r^2$, $S$ is area and $r$ is radius.
+        \begin{equation*}
+            f(r) = \pi  r^2
+         \end{equation*}
+        
+        $g(r)$ is the function represent the change.
+        \begin{align*}
+            g(r) &= \lim_{\Delta r \to 0} \frac{f(r + \Delta r) - f(r)}{\Delta r} \\
+            &= \lim_{\Delta r \to 0} \frac{\pi  (r + \Delta r) ^ 2 - \pi r ^ 2}{\Delta r} \\
+            &= \lim_{\Delta r \to 0} \pi \frac{ \Delta r ^ 2 + 2 r \Delta r}{\Delta r} \\
+            &= \lim_{\Delta r \to 0} 2 \pi r + \pi \Delta r \\
+            &= 2 \pi r 
+         \end{align*}
+         \item we have $V = 4/3 \pi r ^ 3$, $V$ is volume and $r$ is radius.
+         \begin{equation*}
+            f(r) = 4/3 \pi r ^ 3
+         \end{equation*}
+        
+        $g(r)$ is the function represent the change.
+        \begin{align*}
+            g(r) &= \lim_{\Delta x \to 0} \frac{f(r + \Delta r) - f(r)}{\Delta r} \\
+            &= \lim_{\Delta x \to 0} \frac{4}{3} \pi \frac{(r + \Delta r) ^ 3 - r ^ 3}{\Delta r ^ 3} \\
+            &= \lim_{\Delta x \to 0} \frac{4}{3} \pi \frac{r^3  + \Delta r^3 + 3r^2 \Delta r + 3 \Delta r^2r - r ^ 3}{\Delta r} \\
+            &= \lim_{\Delta x \to 0} \frac{4}{3} \pi (\Delta r^2 + 3r^2 + 3r \Delta r ) \\
+            &= 4 \pi r^2
+        \end{align*}
+    \end{enumerate}    
+\item 1C-2
+    \begin{enumerate}
+    \item 
+    \begin{equation*}
+        f(x) = (x-a)g(x)
+    \end{equation*}
+
+    \begin{align*}
+        f'(x) &= \lim_{\Delta x \to 0} \frac{f(x + \Delta x) - f(x)}{\Delta x} \\
+        &= \lim_{\Delta x \to 0} \frac{(x + \Delta x - a)g(x + \Delta x) - (x - a)g(x)}{\Delta x} \\
+        &= \lim_{\Delta x \to 0} \frac{g(x + \Delta x) \Delta x + (x - a)g(x + \Delta x) - (x - a)g(x)}{\Delta x} \\
+        &= \lim_{\Delta x \to 0} g(x + \Delta x) + (x - a)\frac{g(x + \Delta x) -g(x)}{\Delta x} \\
+        &= \lim_{\Delta x \to 0} g(x + \Delta x) + (x - a)g'(x) \\
+        &=  g(x) + (x - a)g'(x) \\
+    \end{align*}
+    if $x = a$:
+    \begin{align*}
+        f'(a) &= g(a) + (a-a)g'(a) \\
+            &= g(a)
+    \end{align*}
+    \end{enumerate}
+\item 1c-3
+    \begin{enumerate}
+        \item
+        \begin{equation*}
+            f(x) = \frac{1}{2x+1}
+        \end{equation*}
+        \begin{align*}
+            f'(x) &= \lim_{\Delta x \to 0} \frac{\frac{1}{2(x + \Delta x) + 1} - \frac{1}{2x + 1}}{\Delta x} \\
+            &= \lim_{\Delta x \to 0} \frac{\frac{2x+1 - 2(x+\Delta x) - 1}{(2(x+\Delta x) + 1)(2x+1)}}{\Delta x} \\
+            &= \lim_{\Delta x \to 0} \frac{\frac{-2\Delta x}{(2(x+\Delta x) + 1)(2x+1)}}{\Delta x} \\
+            &= \lim_{\Delta x \to 0} \frac{-2}{(2(x + \Delta) + 1)(2x + 1)} \\
+            &= \frac{-2}{4x^2 + 8x + 1} \\
+        \end{align*}
+        \item
+        \begin{equation*}
+            f(x) = 2x^2 + 5x + 4
+        \end{equation*}
+        \begin{align*}
+            f'(x) &= \lim_{\Delta x \to 0} \frac{2(x+\Delta x)^2 + 5(x+\Delta x) + 4 - (2x^2 + 5x + 4)}{\Delta x} \\
+            &= \lim_{\Delta x \to 0} \frac{2x^2 + 4x\Delta x + 2 \Delta x^2 + 5x + 5\Delta x + 4 - 2x^2 -5x -4}{\Delta x} \\
+            &= \lim_{\Delta x \to 0} \frac{4x\Delta x + 2 \Delta x^2  + 5\Delta x}{\Delta x} \\
+            &= \lim_{\Delta x \to 0} 4x + 5 + 2\Delta x \\
+            &= 4 x + 5 \\
+        \end{align*}
+        \item 
+        \begin{equation*}
+            f(x) = \frac{1}{x^2 + 1}
+        \end{equation*}
+        \begin{align*}
+            f'(x) &= \lim_{\Delta x \to 0} \frac{\frac{1}{(x+\Delta x)^2+1} - \frac{1}{x^2+1}}{\Delta x} \\
+            &= \lim_{\Delta x \to 0} \frac{\frac{x^2+1}{[(x+\Delta x)^2+1](x^2+1)} - \frac{(x+\Delta x)^2+1}{[(x+\Delta x)^2+1](x^2+1)}}{\Delta x} \\
+            &= \lim_{\Delta x \to 0} \frac{\frac{-2x \Delta x - \Delta x^2}{[(x+\Delta x)^2+1](x^2+1)}}{\Delta x} \\
+            &= \lim_{\Delta x \to 0} \frac{-2x  - \Delta x}{[(x+\Delta x)^2+1](x^2+1)} \\
+            &= \frac{-2x}{(x^2+1)^2}
+        \end{align*}
+        \item 
+        \begin{equation*}
+            f(x) = \frac{1}{\sqrt{x}}
+        \end{equation*}
+        \begin{align*}
+            f'(x) &= \lim_{\Delta x \to 0} \frac{\frac{1}{(x+\Delta x)^\frac{1}{2}} - \frac{1}{x^\frac{1}{2}}}{\Delta x} \\
+            &= \lim_{\Delta x \to 0} \frac{\frac{x^\frac{1}{2} - (x+\Delta x)^\frac{1}{2}}{x^\frac{1}{2}(x+\Delta x)^\frac{1}{2}}}{\Delta x} \\
+            &= \lim_{\Delta x \to 0} \frac{\frac{x - x - \Delta x}{[x^\frac{1}{2} + (x+\Delta x)^\frac{1}{2}][x^\frac{1}{2}(x+\Delta x)^\frac{1}{2}]}}{\Delta x} \\
+            &= \lim_{\Delta x \to 0} \frac{-1}{[x^\frac{1}{2} + (x+\Delta x)^\frac{1}{2}][x^\frac{1}{2}(x+\Delta x)^\frac{1}{2}]} \\ 
+            &= \frac{-1}{2x^\frac{1}{2}x} \\ 
+            &= \frac{-1}{2x^\frac{3}{2}} \\ 
+        \end{align*}
+    \end{enumerate}
+\item 1c-4
+    \begin{enumerate}
+        \item 
+        \begin{equation*}
+            f'(1) = 11 \\
+        \end{equation*}
+        \item 
+        \begin{equation*}
+            f'(a) = 4a+5 \\
+        \end{equation*}
+        \item 
+        \begin{equation*}
+            f'(0) = 0 \\
+        \end{equation*}
+        \item 
+        \begin{equation*}
+            f'(a) = -\frac{1}{2a^\frac{3}{2}}
+        \end{equation*}
+    \end{enumerate}
+\item 1c-5
+    \begin{equation*}
+        f(x) = 1 + (x-1)^2
+    \end{equation*}
+    \begin{align*}
+        f'(x) = 2x - 2
+    \end{align*}
+    define tangent line : $y$ and it cross point(a, f(a))
+    \begin{align*}
+        \frac{y - f(a)}{x - a} &= 2(a-1) \\
+       y &= 2(a-1)(x-a) + (a-1)^2 + 1 \\
+       0 &= -2a^2 + 2a + a^2 -2a + 2 \\
+       0 &= a^2 + 2
+    \end{align*}
+    when $x = 0$, $y = 0$
+    \begin{equation*}
+        a = \pm\sqrt{2}
+    \end{equation*}
+    \begin{equation*}
+        y = 2(\sqrt{2} - 1)(x-\sqrt{2}) + (\sqrt{2} - 1)^2 + 1
+    \end{equation*}
+    \begin{equation*}
+        y = 2(-\sqrt{2} - 1)(x+\sqrt{2}) + (\sqrt{2} + 1)^2 + 1
+    \end{equation*}
+\end{enumerate}
+
+
+\end{document}
